@@ -1,0 +1,143 @@
+/* Input container */
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+/* Input field */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgba(204, 204, 204, 0);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+#root {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.add-button {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 20px;
+  background-color: #F6FDC3;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#delete-all-button {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #FF8080;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#todo-list-button-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#todo-list-add-form {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.checkbox {
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: black;
+  background-color: #CDFADB;
+  border-radius: 10px;
+  font-weight: 500;
+  gap: 20px;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+  flex-grow: 1;
+}
+
+.button {
+  display: block;
+  padding: 10px 20px;
+}
